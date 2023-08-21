@@ -1,0 +1,56 @@
+
+<mat-card>
+    <mat-card-content>
+
+        <p>
+            <mat-toolbar>
+              <span>{{titulo}} </span>
+            </mat-toolbar>
+          </p>
+
+
+        <form [formGroup]="form">
+
+        <mat-grid-list cols="4" rowHeight="60px">
+          <mat-grid-tile [colspan]="4" [rowspan]="1"  >
+            <mat-form-field class="example-full-width">
+                <mat-label>fecha</mat-label>
+                <input matInput formControlName="fecha" >
+              </mat-form-field>
+          </mat-grid-tile>
+
+          <mat-grid-tile [colspan]="4" [rowspan]="1" >
+            <mat-form-field class="example-full-width">
+                <mat-label >inversion</mat-label>
+                <input matInput formControlName="inversiones">
+              </mat-form-field>
+        </mat-grid-tile> 
+        
+        <mat-grid-tile [colspan]="4" [rowspan]="1" >
+            <mat-form-field class="example-full-width">
+                <mat-label>capital inicial</mat-label>
+                <input matInput formControlName="capital">
+              </mat-form-field>
+        </mat-grid-tile>
+    
+        <mat-grid-tile [colspan]="4" [rowspan]="1" >
+            <mat-form-field class="example-full-width">
+                <mat-label>valor actual</mat-label>
+                <input matInput formControlName="valor" >
+              </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="4" [rowspan]="1" >
+            <button mat-raised-button color="primary">volver</button>
+         
+            <button type="submit" mat-raised-button color="primary" (click)="addUser()">aceptar</button>
+        </mat-grid-tile>   
+    </mat-grid-list>
+    
+    </form>
+    </mat-card-content>
+  </mat-card>
+  
+
+
+
